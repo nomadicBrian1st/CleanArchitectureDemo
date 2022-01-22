@@ -11,6 +11,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using CleanArch.Mvc.Models;
+using CleanArch.Infra.Data.Context;
 
 namespace CleanArch.Mvc
 {
@@ -28,6 +29,9 @@ namespace CleanArch.Mvc
         {
             services.AddDbContext<ApplicationDbContext>(options =>
                options.UseNpgsql(Configuration.GetConnectionString("CleanArchDBConnection")));
+
+            services.AddDbContext<UniversityDBContext>(options =>
+              options.UseNpgsql(Configuration.GetConnectionString("CleanArchDBConnection")));
 
             services.AddDatabaseDeveloperPageExceptionFilter();
                                

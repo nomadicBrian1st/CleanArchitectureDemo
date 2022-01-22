@@ -17,4 +17,8 @@
     <Folder Include="Areas\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\CleanArch.Infra.Data\CleanArch.Infra.Data.csproj" />
+  </ItemGroup>
+
 </Project>
