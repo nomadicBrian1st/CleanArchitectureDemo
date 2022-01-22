@@ -12,6 +12,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using CleanArch.Mvc.Models;
 using CleanArch.Infra.Data.Context;
+using CleanArch.Infra.Ioc;
 
 namespace CleanArch.Mvc
 {
@@ -36,6 +37,11 @@ namespace CleanArch.Mvc
             services.AddDatabaseDeveloperPageExceptionFilter();
                                
             services.AddControllersWithViews();
+
+            services.AddRazorPages();
+
+            RegisterServices(services);
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -57,16 +63,17 @@ namespace CleanArch.Mvc
 
             app.UseRouting();
 
-            //app.UseAuthentication();
-            //app.UseAuthorization();
-
-            //app.UseEndpoints(endpoints =>
-            //{
-            //    endpoints.MapControllerRoute(
-            //        name: "default",
-            //        pattern: "{controller=Home}/{action=Index}/{id?}");
-            //    endpoints.MapRazorPages();
-            //});
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapControllerRoute(
+                    name: "default",
+                    pattern: "{controller=Home}/{action=Index}");
+                endpoints.MapRazorPages();
+            });
+        }
+        private static void RegisterServices(IServiceCollection services) 
+        {
+            DependencyContainer.RegisterServices(services);
         }
     }
 }
