@@ -38,7 +38,7 @@ namespace CleanArch.Mvc
                                
             services.AddControllersWithViews();
 
-            services.AddRazorPages();
+            services.AddRazorPages();                       
 
             RegisterServices(services);
 

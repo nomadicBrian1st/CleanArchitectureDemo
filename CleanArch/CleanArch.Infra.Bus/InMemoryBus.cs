@@ -13,9 +13,9 @@ namespace CleanArch.Infra.Bus
     {
         private readonly IMediator _mediator;
 
-        public InMemoryBus(IMediator medator) 
+        public InMemoryBus(IMediator mediator) 
         {
-            _mediator = medator;
+            _mediator = mediator;
         }
 
         public Task SendCommand<T>(T command) where T : Command 

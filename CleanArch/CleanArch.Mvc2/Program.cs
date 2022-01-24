@@ -11,6 +11,8 @@ namespace CleanArch.Mvc2
         {
             Console.WriteLine("Started CleanArch.Mvc..");
             Console.WriteLine("Skipping standard UI ..");
+            //This following statement was throwing an error
+            //MediatR crap and seems so far resolved (see DependencyContainer) 
             CreateHostBuilder(args).Build().Run();
         }
 
