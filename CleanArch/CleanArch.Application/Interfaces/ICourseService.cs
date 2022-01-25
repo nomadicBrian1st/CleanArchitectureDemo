@@ -1,5 +1,6 @@
 ﻿using CleanArch.Application.ViewModels;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,7 +10,7 @@ namespace CleanArch.Application.Interfaces
 {
     public interface ICourseService
     {
-        CourseViewModel GetCourses();
+        IEnumerable<CourseViewModel> GetCourses();
         void CreateCourse(CourseViewModel courseViewModel);
     }
 }

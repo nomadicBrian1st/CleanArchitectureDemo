@@ -42,7 +42,7 @@ namespace CleanArch.Mvc
 
             services.AddRazorPages();
 
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
             
             services.AddMediatR(typeof(Startup));
             

@@ -10,6 +10,7 @@ using CleanArch.Api2.Repository;
 using CleanArch.Api2.Context;
 using CleanArch.Api2.Interfaces;
 using CleanArch.Api2.Services;
+using CleanArch.Api2.Configurations;
 
 namespace CleanArch.Api2
 {
@@ -48,6 +49,9 @@ namespace CleanArch.Api2
             //Infra.Data Layer
             services.AddScoped<ICourseRepository, CourseRepository>();
             services.AddScoped<UniversityDBContext>();
+
+            //AutoMapper
+            services.RegisterAutoMapper();
 
             //RegisterServices(services);
         }

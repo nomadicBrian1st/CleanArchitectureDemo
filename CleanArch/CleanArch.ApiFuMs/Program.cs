@@ -13,6 +13,8 @@ namespace CleanArch.Api2
     {
         public static void Main(string[] args)
         {
+            Console.WriteLine("Started CleanArch.Mvc..");
+            Console.WriteLine("Skipping standard security ...");
             CreateHostBuilder(args).Build().Run();
         }
 

@@ -2,7 +2,12 @@
 
 <div class="container body-content">
     <div class="row course-content">
-        @foreach (var course in Model.Courses)
+        <h2>AutoMapper feature Fail</h2>
+        <p>This worked until Udemy Clearn Arch course stared AutoMapper.
+        It broke the link between Controller/View/Razor usage</p>
+        @{
+         /*
+         @foreach (var course in Model)
          {
             <div class="course-image-container">
                 <div class="course-image" 
@@ -11,6 +16,7 @@
                 </div>
                 <span>@course.Name.</span>
             </div>
-        }
+         } 
+        */}
     </div>
 </div>
