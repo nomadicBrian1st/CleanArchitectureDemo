@@ -17,7 +17,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "CleanArch.ApiFuMs": {
+    "CleanArch.Api2": {
       "commandName": "Project",
       "dotnetRunMessages": "true",
       "launchBrowser": true,

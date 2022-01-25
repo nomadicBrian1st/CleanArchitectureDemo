@@ -36,7 +36,7 @@ namespace CleanArch.Api2
 
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "CleanArch.ApiFuMs", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "CleanArch.Api2", Version = "v1" });
             });
 
             //services.AddMediatR(typeof(Startup));
@@ -63,7 +63,7 @@ namespace CleanArch.Api2
             {
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "CleanArch.ApiFuMs v1"));
+                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "CleanArch.Api2 v1"));
             }
 
             app.UseHttpsRedirection();
