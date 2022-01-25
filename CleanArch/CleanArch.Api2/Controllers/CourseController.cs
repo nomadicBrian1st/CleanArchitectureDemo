@@ -17,7 +17,7 @@ namespace CleanArch.Api2.Controllers
     {
         // Inject the course service (IoC)
 
-        // Implement full clean architecture way 
+        // Implement with Infra IoC/Data with CQRS and Bus 
         //private readonly ICourseService _courseService;
         //public CourseController(ICourseService courseService)
         // {
