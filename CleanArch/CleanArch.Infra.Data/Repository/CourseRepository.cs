@@ -18,9 +18,17 @@ namespace CleanArch.Infra.Data.Repository
         {
             _ctx = ctx;
         }
+
+        //Implement DB context options using Domain layer models 
         public IEnumerable<Course> GetCourse()
         {
             return _ctx.Courses;            
+        }
+
+        public void AddCourse(Course course) 
+        {
+            _ctx.Courses.Add(course);
+            _ctx.SaveChanges();
         }
     }
 }

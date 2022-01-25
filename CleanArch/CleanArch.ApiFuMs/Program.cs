@@ -1,18 +1,18 @@
-using CleanArch.Mvc;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
 using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
-namespace CleanArch.Mvc2
+namespace CleanArch.Api2
 {
     public class Program
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine("Started CleanArch.Mvc..");
-            Console.WriteLine("Skipping standard UI ..");
-            //This following statement was throwing an error
-            //MediatR crap and seems so far resolved (see DependencyContainer) 
             CreateHostBuilder(args).Build().Run();
         }
 

@@ -13,6 +13,8 @@ using System.Threading.Tasks;
 using CleanArch.Mvc.Models;
 using CleanArch.Infra.Data.Context;
 using CleanArch.Infra.Ioc;
+using Microsoft.AspNetCore.Mvc;
+using MediatR;
 
 namespace CleanArch.Mvc
 {
@@ -40,6 +42,10 @@ namespace CleanArch.Mvc
 
             services.AddRazorPages();
 
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+            
+            services.AddMediatR(typeof(Startup));
+            
             RegisterServices(services);
 
         }
