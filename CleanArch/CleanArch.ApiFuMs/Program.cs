@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace CleanArch.ApiFuMs
+namespace CleanArch.Api2
 {
     public class Program
     {

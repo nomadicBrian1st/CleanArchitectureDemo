@@ -25,9 +25,6 @@ namespace CleanArch.Infra.Data.Repository
             return _ctx.Courses;            
         }
 
-        //WTF should this be? This repository thinks it is missing 
-        //an implementation and it is most likely some mismatch with the Add
-        //which is spread out over bum f... architecture.
         public void AddCourse(Course course) 
         {
             _ctx.Courses.Add(course);
