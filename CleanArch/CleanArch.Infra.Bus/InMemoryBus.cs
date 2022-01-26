@@ -18,6 +18,7 @@ namespace CleanArch.Infra.Bus
             _mediator = mediator;
         }
 
+        //MediatR sending command of type request
         public Task SendCommand<T>(T command) where T : Command 
         {
             return _mediator.Send(command);
