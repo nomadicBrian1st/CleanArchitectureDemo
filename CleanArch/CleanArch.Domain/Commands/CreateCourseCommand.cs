@@ -8,7 +8,7 @@ namespace CleanArch.Domain.Commands
 {
     public class CreateCourseCommand : CourseCommand
     {
-        //WTF is this supposed to be? A method or a constructor?
+        //Is this a method or a constructor?
         public CreateCourseCommand(string name, string description, string imageUrl) 
         {
             Name = name;

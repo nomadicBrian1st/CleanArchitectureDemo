@@ -11,7 +11,7 @@ namespace CleanArch.Infra.Data.Repository
 {
     public class CourseRepository : ICourseRepository
     {
-        private UniversityDBContext _ctx;
+        private readonly UniversityDBContext _ctx;
 
         //Inject the UniversityDBContext 
         public CourseRepository(UniversityDBContext ctx) 
@@ -20,11 +20,12 @@ namespace CleanArch.Infra.Data.Repository
         }
 
         //Implement DB context options using Domain layer models 
-        public IEnumerable<Course> GetCourse()
+        public IQueryable<Course> GetCourses()
         {
             return _ctx.Courses;            
         }
 
+        // Follow up an EF Core add with a save changes. 
         public void AddCourse(Course course) 
         {
             _ctx.Courses.Add(course);

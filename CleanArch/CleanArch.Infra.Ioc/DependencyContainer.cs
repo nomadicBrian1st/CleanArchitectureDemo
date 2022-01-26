@@ -22,9 +22,7 @@ namespace CleanArch.Infra.Ioc
         public static void RegisterServices(IServiceCollection services) 
         {
             //Domain InMemoryBus MediatR
-            //The line below was by shear luck but it solved 
-            //the exception problem. Guess MediatR was found
-            //so that the AddScoped that followed could use the interfaces
+            //Not sure if MediatR is set correctly here but it builds 
             services.AddMediatR(typeof(InMemoryBus));
             services.AddScoped<IMediatorHandler, InMemoryBus>();
 
